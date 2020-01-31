@@ -1,0 +1,5 @@
+C:\Users\tyro0\source\repos\Library\Book\bin\Debug\BusinessLayer.dll
+C:\Users\tyro0\source\repos\Library\Book\bin\Debug\BusinessLayer.pdb
+C:\Users\tyro0\source\repos\Library\Book\obj\Debug\BusinessLayer.csprojAssemblyReference.cache
+C:\Users\tyro0\source\repos\Library\Book\obj\Debug\BusinessLayer.dll
+C:\Users\tyro0\source\repos\Library\Book\obj\Debug\BusinessLayer.pdb
