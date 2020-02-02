@@ -28,6 +28,12 @@ namespace BusinessLayer
                  item.changeStatus();
             }
 
+                    // member.addReservation(this);
+
+        }
+        internal Invoice Return()
+        {
+            return new Invoice(member,this,from);
         }
     }
 }

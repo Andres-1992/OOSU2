@@ -13,5 +13,10 @@ namespace BusinessLayer
         {
             reservations.Add(res);
         }
+        public Member findMember(int reservationNumber)
+        {
+            return reservations.FirstOrDefault(x => x.id.Equals(reservationNumber)).member;
+        }
+
     }
 }

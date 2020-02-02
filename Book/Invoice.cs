@@ -8,12 +8,27 @@ namespace BusinessLayer
 {
    public class Invoice
     {
-        private Reservation reservation { get; set; }
-        private Member member { get; set; }
-        private double totalAmount { get; set; }
+        internal Reservation reservation { get; set; }
+        public Member member { get; set; }
+        public double totalAmount { get; set; }
         private DateTime from { get; set; }
         private DateTime to { get; set; }
 
+        internal Invoice(Member m, Reservation r, DateTime from )
+        {
+            member = m;
+            reservation = r;
+            this.from = from;
+            to = DateTime.Now;
+            if (to.Date > reservation.to.Date)
+            {
+                totalAmount = ((to.Date - reservation.to.Date).TotalDays) * 10;
+            }            
+            else
+            {
+                totalAmount = 0;
+            }
+        }
     }
 
 }

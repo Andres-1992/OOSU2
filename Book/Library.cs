@@ -9,9 +9,9 @@ namespace BusinessLayer
     public class Library
     {
         Employee loggedin;
+        readonly InvoiceRepository ir = new InvoiceRepository();
         readonly BookRepository br = new BookRepository();
         readonly EmployeeRepository er = new EmployeeRepository();
-        // readonly InvoiceRepository ir = new InvoiceRepository();
         readonly MemberRepository mr = new MemberRepository();
         readonly ReservationRepository rr = new ReservationRepository();
 
@@ -40,13 +40,26 @@ namespace BusinessLayer
             {
                 Reservation reservation = new Reservation(loggedin, reservingMember, list);
                 rr.addReservation(reservation);
-                reservingMember.addReservation(reservation);
+                reservingMember.CurrentReservation = reservation;
+                //  reservingMember.addReservation(reservation);
                 return reservation;
             }
             else { return null; }
         }
 
-
+        public Invoice returnbooks(int reservationNumber)
+        {
+            Member m = rr.findMember(reservationNumber);
+            if (loggedin != null && m.CurrentReservation != null)
+            {
+                ir.addInvoice(m.CurrentReservation.Return());
+                
+                return m.CurrentReservation.Return();
+                
+            }
+            else { return null; }
+           
+        }
 
 
 

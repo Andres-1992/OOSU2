@@ -12,7 +12,8 @@ namespace BusinessLayer
         public string name { get; set; }
         private int phonenumber { get; set; }
         public string email { get; set; }
-        public List<Reservation> reservations = new List<Reservation>();
+        internal Reservation CurrentReservation { get; set; }
+        //public List<Reservation> reservations = new List<Reservation>();
         internal Member(int id, string name, int phonenumber, string email)
         {
             this.id = id;
@@ -21,10 +22,10 @@ namespace BusinessLayer
             this.email = email;
 
         }
-        public void addReservation(Reservation res)
-        {
-            reservations.Add(res);
-        }
+        //public void addReservation(Reservation res)
+        //{
+        //    reservations.Add(res);
+        //}
     }
 
 }

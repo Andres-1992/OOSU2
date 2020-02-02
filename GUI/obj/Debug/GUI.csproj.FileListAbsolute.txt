@@ -7,3 +7,12 @@ C:\Users\tyro0\source\repos\Library\GUI\obj\Debug\GUI.csprojAssemblyReference.ca
 C:\Users\tyro0\source\repos\Library\GUI\obj\Debug\GUI.csproj.CopyComplete
 C:\Users\tyro0\source\repos\Library\GUI\obj\Debug\GUI.exe
 C:\Users\tyro0\source\repos\Library\GUI\obj\Debug\GUI.pdb
+C:\Users\tyro0\Desktop\Skola\OOSU2 LAB 1\GUI\bin\Debug\GUI.exe.config
+C:\Users\tyro0\Desktop\Skola\OOSU2 LAB 1\GUI\bin\Debug\GUI.exe
+C:\Users\tyro0\Desktop\Skola\OOSU2 LAB 1\GUI\bin\Debug\GUI.pdb
+C:\Users\tyro0\Desktop\Skola\OOSU2 LAB 1\GUI\bin\Debug\BusinessLayer.dll
+C:\Users\tyro0\Desktop\Skola\OOSU2 LAB 1\GUI\bin\Debug\BusinessLayer.pdb
+C:\Users\tyro0\Desktop\Skola\OOSU2 LAB 1\GUI\obj\Debug\GUI.csprojAssemblyReference.cache
+C:\Users\tyro0\Desktop\Skola\OOSU2 LAB 1\GUI\obj\Debug\GUI.csproj.CopyComplete
+C:\Users\tyro0\Desktop\Skola\OOSU2 LAB 1\GUI\obj\Debug\GUI.exe
+C:\Users\tyro0\Desktop\Skola\OOSU2 LAB 1\GUI\obj\Debug\GUI.pdb
