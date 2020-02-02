@@ -33,6 +33,10 @@ namespace BusinessLayer
         }
         internal Invoice Return()
         {
+            foreach (var item in books)
+            {
+                item.changeStatus();
+            }
             return new Invoice(member,this,from);
         }
     }

@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="BusinessLayer.ReservationRepository">
+    <Position X="7" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAgAAAABAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>ReservationRepository.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="reservations" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="BusinessLayer.Member" Collapsed="true">
+    <Position X="7" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAhAAAAAAAAAEAEAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>Member.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BusinessLayer.MemberRepository">
+    <Position X="2.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABAAAAAAAAAAQAAAAAAAAAAAE=</HashCode>
+      <FileName>MemberRepository.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="members" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="BusinessLayer.Reservation">
+    <Position X="7" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAACAAAgAAAAAAAAACAAAEAAABgA=</HashCode>
+      <FileName>Reservation.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="member" />
+      <Property Name="expedit" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Field Name="books" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="BusinessLayer.Book">
+    <Position X="3" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQQAAAAAAAAAAAAAAAAAAAAAEgAAAAAAAAAA=</HashCode>
+      <FileName>Book.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BusinessLayer.BookRepository">
+    <Position X="3" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIAAAAACAAAAAAAAACAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BookRepository.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="books" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="BusinessLayer.Employee">
+    <Position X="9.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAAAAAAAAAABAAAAAEAAAAAAAAAgAAAgA=</HashCode>
+      <FileName>Employee.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BusinessLayer.EmployeeRepository">
+    <Position X="12.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAAAAAAAAIAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>EmployeeRepository.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="employees" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="BusinessLayer.Invoice">
+    <Position X="11.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAEAAAABgAAAAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>Invoice.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="member" />
+      <Property Name="reservation" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="BusinessLayer.InvoiceRepository">
+    <Position X="14.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAA=</HashCode>
+      <FileName>InvoiceRepository.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="invoices" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="BusinessLayer.Library">
+    <Position X="18" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAQAAAAAABAAAAAAAAACIwABAAAAAACAAAIAAA=</HashCode>
+      <FileName>Library.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

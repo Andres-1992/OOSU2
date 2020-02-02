@@ -65,11 +65,17 @@ namespace GUI
                             Console.Write("Do you want to continue Y/N: ");
                             answer = Console.ReadLine().ToLower();
                             Console.WriteLine();
-
-
                         }
                         Reservation reservation = l.reserveBooks(memberid, chosenBooks);
-                        Console.WriteLine("Reservation number is: {0}", reservation.id);
+                        if (reservation == null)
+                        {
+                            Console.WriteLine("Your reservation kunde inte skapas try again");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Reservation number is: {0}", reservation.id);
+                        }
+
                         Console.ReadLine();
                         break;
                     case 2:

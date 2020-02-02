@@ -36,7 +36,7 @@ namespace BusinessLayer
         public Reservation reserveBooks(int id, List<Book> list)
         {
             Member reservingMember = mr.getMemberById(id);
-            if (reservingMember != null)
+            if (reservingMember != null && list.Count>0)
             {
                 Reservation reservation = new Reservation(loggedin, reservingMember, list);
                 rr.addReservation(reservation);
@@ -52,9 +52,10 @@ namespace BusinessLayer
             Member m = rr.findMember(reservationNumber);
             if (loggedin != null && m.CurrentReservation != null)
             {
-                ir.addInvoice(m.CurrentReservation.Return());
+                Invoice invoice = m.CurrentReservation.Return();
+                ir.addInvoice(invoice);
                 
-                return m.CurrentReservation.Return();
+                return invoice;
                 
             }
             else { return null; }
