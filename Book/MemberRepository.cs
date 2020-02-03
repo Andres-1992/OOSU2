@@ -10,11 +10,11 @@ namespace BusinessLayer
     {
         List<Member> members = new List<Member>();
 
-        public Member getMemberById(int id)
+        public Member GetMemberById(int id)
         {
-            return members.FirstOrDefault(x => x.id.Equals(id));
+            return members.FirstOrDefault(x => x.Id.Equals(id));
         }
-        public void addMember(Member m)
+        public void AddMember(Member m)
         {
             members.Add(m);
         }

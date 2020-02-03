@@ -6,26 +6,33 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer
 {
-   public class Member
+    public class Member
     {
-        internal int id { get; set; }
-        public string name { get; set; }
-        private int phonenumber { get; set; }
-        public string email { get; set; }
-        internal Reservation CurrentReservation { get; set; }
-        //public List<Reservation> reservations = new List<Reservation>();
-        internal Member(int id, string name, int phonenumber, string email)
+        MemberRepository mr = new MemberRepository();
+        internal int Id { get; set; }
+        public string Name { get; set; }
+        private string PhoneNumber { get; set; }
+        private string Email { get; set; }
+        // internal Reservation CurrentReservation { get; set; }
+        private List<Invoice> invoices = new List<Invoice>();
+        private List<Reservation> reservations = new List<Reservation>();
+        internal Member(int id, string name, string phoneNumber, string email)
         {
-            this.id = id;
-            this.name = name;
-            this.phonenumber = phonenumber;
-            this.email = email;
+            Id = id;
+            Name = name;
+            PhoneNumber = phoneNumber;
+            Email = email;
 
         }
-        //public void addReservation(Reservation res)
-        //{
-        //    reservations.Add(res);
-        //}
+        public void AddReservation(Reservation res)
+        {
+            reservations.Add(res);
+        }
+        public void AddInvoice(Invoice invoice)
+        {
+            invoices.Add(invoice);          
+        }
+
     }
 
 }

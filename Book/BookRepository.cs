@@ -14,7 +14,7 @@ namespace BusinessLayer
         public List<Book> GetlistOfAvailablebooks()
         {
 
-            var result = books.Where(x => x.isAvailable).ToList();
+            var result = books.Where(x => x.IsAvailable).ToList();
 
 
             return result;
@@ -22,7 +22,7 @@ namespace BusinessLayer
 
         }
 
-       public void addBook(Book b)
+       public void AddBook(Book b)
         {
             books.Add(b);
         }

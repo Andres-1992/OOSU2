@@ -9,7 +9,7 @@ namespace BusinessLayer
     class InvoiceRepository
     {
         List<Invoice> invoices = new List<Invoice>();
-        public void addInvoice( Invoice invoice)
+        public void AddInvoice( Invoice invoice)
         {
             invoices.Add(invoice);
         }

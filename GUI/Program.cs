@@ -15,35 +15,37 @@ namespace GUI
         {
 
             Library l = new Library();
-            l.loadTestData();
+            l.LoadTestdata();
 
             Console.Write("Enter your Employee number: ");
             int id = TryInt();
             Console.Write("Enter your password: ");
             string password = GetHiddenConsoleInput();
             Console.WriteLine();
-            l.logIn(id, password);
+            l.LogIn(id, password);
             Console.Clear();
             bool fortsätt = true;
             while (fortsätt)
             {
-                Console.WriteLine("[1] Boka");
+                Console.WriteLine("[1] Make reservation");
                 Console.WriteLine("----------------------");
-                Console.WriteLine("[2] Lämna tillbaka");
+                Console.WriteLine("[2] Return books");
                 Console.WriteLine("----------------------");
-                Console.WriteLine("[3] avsluta");
+                Console.WriteLine("[3] Show available books");
                 Console.WriteLine("----------------------");
-                Console.Write("Ange menyval: ");
+                Console.WriteLine("[4] Exit");
+                Console.WriteLine("----------------------");
+                Console.Write("Enter Menu selection: ");
 
-                int menyVal = int.Parse(Console.ReadLine());
+                int menyVal = TryInt();
 
                 switch (menyVal)
                 {
                     case 1:
                         Console.Clear();
-                        foreach (var item in l.getAvailableBook())
+                        foreach (var item in l.GetAvailableBook())
                         {
-                            Console.WriteLine("Titel:  {0}", item.title);
+                            Console.WriteLine("Titel:  {0}", item.Title);
                         }
                         Console.WriteLine();
                         Console.Write("Enter Member ID: ");
@@ -55,9 +57,9 @@ namespace GUI
                             Console.Write("Enter book title: ");
                             string booktitle = Console.ReadLine().ToLower();
 
-                            foreach (var item in l.getAvailableBook())
+                            foreach (var item in l.GetAvailableBook())
                             {
-                                if (item.title.ToLower() == booktitle)
+                                if (item.Title.ToLower() == booktitle)
                                 {
                                     chosenBooks.Add(item);
                                 }
@@ -66,16 +68,16 @@ namespace GUI
                             answer = Console.ReadLine().ToLower();
                             Console.WriteLine();
                         }
-                        Reservation reservation = l.reserveBooks(memberid, chosenBooks);
+                        Reservation reservation = l.ReserveBooks(memberid, chosenBooks);
                         if (reservation == null)
                         {
-                            Console.WriteLine("Your reservation kunde inte skapas try again");
+                            Console.WriteLine("Your reservation couldn't be added");
                         }
                         else
                         {
-                            Console.WriteLine("Reservation number is: {0}", reservation.id);
+                            Console.WriteLine("Reservation number is: {0}", reservation.Id);
                         }
-
+                        Console.WriteLine("yani tryck nåt för o gå vidare, släppt det bara");
                         Console.ReadLine();
                         break;
                     case 2:
@@ -83,11 +85,27 @@ namespace GUI
                         int reservationnumber;
                         Console.Write("Enter reservation number: ");
                         reservationnumber = TryInt();
-                        Invoice invoice = l.returnbooks(reservationnumber);
-                        Console.WriteLine("The total amount for {0} is {1:c}", invoice.member.name, invoice.totalAmount);
+                        Invoice invoice = l.ReturnBooks(reservationnumber);
+                        if (invoice != null)
+                        {
+                            Console.WriteLine("The total amount for {0} is {1:c}", invoice.Member.Name, invoice.TotalPrice);
+                        }
+                        else
+                        {
+                            Console.WriteLine("The reservation number {0} does not exist",reservationnumber);
+                        }
                         Console.ReadLine();
                         break;
                     case 3:
+                        Console.Clear();
+                        foreach (var item in l.GetAvailableBook())
+                        {
+                            Console.WriteLine("Titel:  {0}", item.Title);
+                        }
+                        Console.ReadLine();
+                        break;
+                        
+                    case 4:
                         fortsätt = false;
                         break;
                 }

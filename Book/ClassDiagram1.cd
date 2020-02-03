@@ -3,17 +3,17 @@
   <Class Name="BusinessLayer.ReservationRepository">
     <Position X="7" Y="8.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAgAAAABAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAgAAAABAAAAAABAAAAAAAAAAAAAI=</HashCode>
       <FileName>ReservationRepository.cs</FileName>
     </TypeIdentifier>
     <ShowAsCollectionAssociation>
       <Field Name="reservations" />
     </ShowAsCollectionAssociation>
   </Class>
-  <Class Name="BusinessLayer.Member" Collapsed="true">
-    <Position X="7" Y="0.75" Width="1.5" />
+  <Class Name="BusinessLayer.Member">
+    <Position X="7.25" Y="0.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAhAAAAAAAAAEAEAAAAAAAAAAAAAgA=</HashCode>
+      <HashCode>IAAAAAAAAAAAAAAgAAAAABAAAEAEAAAAIAAAAAAAAgI=</HashCode>
       <FileName>Member.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -59,14 +59,14 @@
     </ShowAsCollectionAssociation>
   </Class>
   <Class Name="BusinessLayer.Employee">
-    <Position X="9.5" Y="6.25" Width="1.5" />
+    <Position X="9.75" Y="6.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>QAAAAAAAAAAAAAAAAAAAABAAAAAEAAAAAAAAAgAAAgA=</HashCode>
       <FileName>Employee.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="BusinessLayer.EmployeeRepository">
-    <Position X="12.5" Y="6.25" Width="1.5" />
+    <Position X="12.5" Y="5.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>QAAAAAAAAAAAAAAAAAAIAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>EmployeeRepository.cs</FileName>
@@ -82,8 +82,8 @@
       <FileName>Invoice.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Property Name="reservation" />
       <Property Name="member" />
+      <Property Name="reservation" />
     </ShowAsAssociation>
   </Class>
   <Class Name="BusinessLayer.InvoiceRepository">
@@ -97,7 +97,7 @@
     </ShowAsCollectionAssociation>
   </Class>
   <Class Name="BusinessLayer.Library">
-    <Position X="13.5" Y="7.75" Width="1.5" />
+    <Position X="13.5" Y="7.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAQAAAQAAAAAABAAAAAAAAACIwABAAAAAACAAAIAAA=</HashCode>
       <FileName>Library.cs</FileName>

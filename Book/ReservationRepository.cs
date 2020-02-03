@@ -8,15 +8,15 @@ namespace BusinessLayer
 {
     class ReservationRepository
     {
-        List<Reservation> reservations = new List<Reservation>();
-        public void addReservation(Reservation res)
+       readonly List<Reservation> reservations = new List<Reservation>();
+        public void AddReservation(Reservation reservation)
         {
-            reservations.Add(res);
+            reservations.Add(reservation);
         }
-        public Member findMember(int reservationNumber)
+       
+        public Reservation GetReservationById(int id)
         {
-            return reservations.FirstOrDefault(x => x.id.Equals(reservationNumber)).member;
+            return reservations.FirstOrDefault(x => x.Id.Equals(id));
         }
-
     }
 }

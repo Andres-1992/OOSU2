@@ -6,27 +6,29 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer
 {
-   public class Invoice
+    public class Invoice
     {
-        internal Reservation reservation { get; set; }
-        public Member member { get; set; }
-        public double totalAmount { get; set; }
-        private DateTime from { get; set; }
-        private DateTime to { get; set; }
+        internal int Id {get;set;}
+        internal Reservation Reservation { get; set; }
+        public Member Member { get; set; }
+        public double TotalPrice { get; set; }
+        private DateTime From { get; set; }
+        private DateTime To { get; set; }
 
         internal Invoice(Member m, Reservation r, DateTime from )
         {
-            member = m;
-            reservation = r;
-            this.from = from;
-            to = DateTime.Now;
-            if (to.Date > reservation.to.Date)
+            Id = new Random().Next(800, 1000);
+            Member = m;
+            Reservation = r;
+            this.From = from;
+            To = DateTime.Now;
+            if (To.Date > Reservation.To.Date)
             {
-                totalAmount = ((to.Date - reservation.to.Date).TotalDays) * 10;
+                TotalPrice = ((To.Date - Reservation.To.Date).TotalDays) * 10;
             }            
             else
             {
-                totalAmount = 0;
+                TotalPrice = 0;
             }
         }
     }

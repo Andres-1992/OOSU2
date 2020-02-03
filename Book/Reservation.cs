@@ -8,24 +8,24 @@ namespace BusinessLayer
 {
    public class Reservation
     {
-        public int id { get; private set; }
-        public DateTime from { get; private set; }
-        public DateTime to { get; private set; }
+        public int Id { get; private set; }
+        private DateTime From { get;  set; }
+        internal DateTime To { get; private set; }
         private List<Book> books = new List<Book>();
-        public Employee expedit { get; private set; }
-        public Member member { get; private set; }
+        private Employee Expedit { get; set; }
+        internal Member Member { get; set; }
 
-        internal Reservation(Employee emp, Member m, List<Book> b)
+        internal Reservation(Employee employee, Member member, List<Book> book)
         {
-            id = new Random().Next(100, 1000);
-            from = DateTime.Now;
-            to = from.AddDays(14);
-            expedit = emp;
-            member = m;
-            foreach (var item in b)
+            Id = new Random().Next(100, 1000);
+            From = DateTime.Now;
+            To = From.AddDays(14);
+            Expedit = employee;
+            Member = member;
+            foreach (var item  in book)
             {
                  books.Add(item);
-                 item.changeStatus();
+                 item.ChangeStatus();
             }
 
                     // member.addReservation(this);
@@ -35,9 +35,9 @@ namespace BusinessLayer
         {
             foreach (var item in books)
             {
-                item.changeStatus();
+                item.ChangeStatus();
             }
-            return new Invoice(member,this,from);
+            return new Invoice(Member,this,From);
         }
     }
 }

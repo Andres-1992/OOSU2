@@ -10,19 +10,19 @@ namespace BusinessLayer
    public class Book
     {
         private string ISBN { get; set; }
-        public string title { get; set; }
-        public bool isAvailable { get; set; }
+        public string Title { get; set; }
+        internal bool IsAvailable { get; set; }
         
         internal Book(string isbn,string title)
         {
             ISBN = isbn;
-            this.title = title;
-            isAvailable = true;
+            Title = title;
+            IsAvailable = true;
 
         } 
-        public void changeStatus()
+        internal void ChangeStatus()
         {
-            this.isAvailable = !isAvailable;
+            this.IsAvailable = !IsAvailable;
         }
            
     }
