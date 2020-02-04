@@ -3,7 +3,7 @@
   <Class Name="BusinessLayer.ReservationRepository">
     <Position X="7" Y="8.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAgAAAABAAAAAABAAAAAAAAAAAAAI=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAABAEAAAAAAAAAAAAAgAAAAA=</HashCode>
       <FileName>ReservationRepository.cs</FileName>
     </TypeIdentifier>
     <ShowAsCollectionAssociation>
@@ -13,14 +13,14 @@
   <Class Name="BusinessLayer.Member">
     <Position X="7.25" Y="0.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>IAAAAAAAAAAAAAAgAAAAABAAAEAEAAAAIAAAAAAAAgI=</HashCode>
+      <HashCode>AAACAAAAACAAAAAAAAAAQAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Member.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="BusinessLayer.MemberRepository">
     <Position X="2.5" Y="0.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAABAAAAAAAAAAQAAAAAAAAAAAE=</HashCode>
+      <HashCode>AAAAAAAAAAABAAAAAAAAAAAAAQAAAAQAAAAAAQAAAAA=</HashCode>
       <FileName>MemberRepository.cs</FileName>
     </TypeIdentifier>
     <ShowAsCollectionAssociation>
@@ -30,12 +30,12 @@
   <Class Name="BusinessLayer.Reservation">
     <Position X="7" Y="5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAIAAAAAAAAAAACAAAgAAAAAAAAACAAAEAAABgA=</HashCode>
+      <HashCode>AgACAAAAAAAAAAAAAACAAAAAAAAIAAAAAAAEEAAAAAA=</HashCode>
       <FileName>Reservation.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Property Name="expedit" />
-      <Property Name="member" />
+      <Property Name="Expedit" />
+      <Property Name="Member" />
     </ShowAsAssociation>
     <ShowAsCollectionAssociation>
       <Field Name="books" />
@@ -44,14 +44,14 @@
   <Class Name="BusinessLayer.Book">
     <Position X="3" Y="5.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAQQAAAAAAAAAAAAAAAAAAAAAEgAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAQAAAEAAAAAAAAAAAAQAAAAAAAAAAIAAAAA=</HashCode>
       <FileName>Book.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="BusinessLayer.BookRepository">
     <Position X="3" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAIAAAAACAAAAAAAAACAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAgAAAAAAACCAAAAAAAAACAAAAAAAAAAAAAA=</HashCode>
       <FileName>BookRepository.cs</FileName>
     </TypeIdentifier>
     <ShowAsCollectionAssociation>
@@ -61,14 +61,14 @@
   <Class Name="BusinessLayer.Employee">
     <Position X="9.75" Y="6.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>QAAAAAAAAAAAAAAAAAAAABAAAAAEAAAAAAAAAgAAAgA=</HashCode>
+      <HashCode>AAACAAAAAAAAAAAAEAAAAAQAAAAAAAACAAAAAIAAAAA=</HashCode>
       <FileName>Employee.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="BusinessLayer.EmployeeRepository">
     <Position X="12.5" Y="5.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>QAAAAAAAAAAAAAAAAAAIAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAEAAAAAACAAAAAAIIAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>EmployeeRepository.cs</FileName>
     </TypeIdentifier>
     <ShowAsCollectionAssociation>
@@ -78,18 +78,18 @@
   <Class Name="BusinessLayer.Invoice">
     <Position X="11.25" Y="0.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAIAAAAAAAAAEAAAABgAAAAAAAAACAAAAAAAAAA=</HashCode>
+      <HashCode>AgACAAAAAAAAAAAAEAAAAAAAAAAIQAAAAAAAAAAAAAA=</HashCode>
       <FileName>Invoice.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Property Name="member" />
-      <Property Name="reservation" />
+      <Property Name="Reservation" />
+      <Property Name="Member" />
     </ShowAsAssociation>
   </Class>
   <Class Name="BusinessLayer.InvoiceRepository">
     <Position X="14.75" Y="3.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>IAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAA=</HashCode>
+      <HashCode>IAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAA=</HashCode>
       <FileName>InvoiceRepository.cs</FileName>
     </TypeIdentifier>
     <ShowAsCollectionAssociation>
@@ -97,9 +97,9 @@
     </ShowAsCollectionAssociation>
   </Class>
   <Class Name="BusinessLayer.Library">
-    <Position X="13.5" Y="7.25" Width="1.5" />
+    <Position X="13.5" Y="7.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAQAAAQAAAAAABAAAAAAAAACIwABAAAAAACAAAIAAA=</HashCode>
+      <HashCode>AAgAAAAQAAAEAAAAAAAAgAAACowABBAAAAAAAAAAAAA=</HashCode>
       <FileName>Library.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>

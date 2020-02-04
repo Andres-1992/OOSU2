@@ -13,10 +13,10 @@ namespace GUI
 
         static void Main(string[] args)
         {
-
+            
             Library l = new Library();
+         
             l.LoadTestdata();
-
             Console.Write("Enter your Employee number: ");
             int id = TryInt();
             Console.Write("Enter your password: ");
@@ -83,7 +83,7 @@ namespace GUI
                             {
                                 Console.WriteLine("Reservation number is: {0}", reservation.Id);
                             }
-                            Console.WriteLine("yani tryck nåt för o gå vidare, släppt det bara");
+                            Console.WriteLine("Press any key to continue");
                             Console.ReadLine();
                             break;
                         case 2:
@@ -138,7 +138,7 @@ namespace GUI
             }
             return input.ToString();
         }
-        public static int TryInt()
+        private static int TryInt()
         {
 
             int d;

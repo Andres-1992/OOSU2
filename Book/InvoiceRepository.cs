@@ -8,8 +8,8 @@ namespace BusinessLayer
 {
     class InvoiceRepository
     {
-        List<Invoice> invoices = new List<Invoice>();
-        public void AddInvoice( Invoice invoice)
+       private List<Invoice> invoices = new List<Invoice>();
+        internal void AddInvoice( Invoice invoice)
         {
             invoices.Add(invoice);
         }

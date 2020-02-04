@@ -8,13 +8,13 @@ namespace BusinessLayer
 {
     class ReservationRepository
     {
-       readonly List<Reservation> reservations = new List<Reservation>();
-        public void AddReservation(Reservation reservation)
+       private List<Reservation> reservations = new List<Reservation>();
+        internal void AddReservation(Reservation reservation)
         {
             reservations.Add(reservation);
         }
        
-        public Reservation GetReservationById(int id)
+        internal Reservation GetReservationById(int id)
         {
             return reservations.FirstOrDefault(x => x.Id.Equals(id));
         }
