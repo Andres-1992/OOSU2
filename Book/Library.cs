@@ -15,15 +15,18 @@ namespace BusinessLayer
         readonly MemberRepository mr = new MemberRepository();
         readonly ReservationRepository rr = new ReservationRepository();
 
-        public void LogIn(int id, string password)
+        public bool LogIn(int id, string password)
         {
-            if (er.GetEmployeeById(id).CheckPassword(password))
+            Employee e = er.GetEmployeeById(id);
+
+            if (e.CheckPassword(password))
             {
-                loggedin = er.GetEmployeeById(id);
+                loggedin = e;
+                return true;
             }
             else
             {
-                throw new InvalidOperationException("not logged in");
+                return false;
             }
         }
         public List<Book> GetAvailableBook()
